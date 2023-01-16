@@ -22,10 +22,11 @@ def word_search(doc_list, keyword):
             if strip == keyword:
                 list_of_indexes.append(doc_list.index(doc)) 
                 print(list_of_indexes)
+                break
     return(list_of_indexes)            
 
 
-doc_list = ["The Learn Python Challenge Casino.", "They bought a car, bike and boat in casino", "Casinoville"]
+doc_list = ["The Learn Casinoo Python casino Challenge Casino.", "They bought a car, bike and boat in casino", "Casinoville"]
 word_search = word_search(doc_list, 'casino')
 print(word_search)
 
