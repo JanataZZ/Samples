@@ -5,11 +5,11 @@ def word_search(doc_list, keyword):
     containing the keyword.
 
     Example:
-    doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville"]
+    doc_list = ["The Learn Python Challenge Casino.", "They bought a car in casino", "Casinoville"]
     >>> word_search(doc_list, 'casino')
     >>> [0]
     """
-    
+    list_of_indexes = []
     for doc in doc_list:
         print(doc)
         low = doc.lower() 
@@ -20,17 +20,20 @@ def word_search(doc_list, keyword):
             strip = word.strip('.').strip(',')
             print(strip)
             if strip == keyword:
-                print("success")
+                list_of_indexes.append(doc_list.index(doc)) 
+                print(list_of_indexes)
+    return(list_of_indexes)            
 
 
-doc_list = ["The Learn Python Challenge Casino.", "They bought a car, bike and boat", "Casinoville"]
-word_search(doc_list, 'casino')
-
+doc_list = ["The Learn Python Challenge Casino.", "They bought a car, bike and boat in casino", "Casinoville"]
+word_search = word_search(doc_list, 'casino')
+print(word_search)
 
 str = " The Learn Python Challenge Casino. "
 
 spl = str.split('t')
 low = str.lower()
 strip = str.strip(' ').strip('.').strip('T').strip('o')
-#print(str)
+ind = str.index('t')
+#print(ind)
 #print(low)
